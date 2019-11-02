@@ -1,8 +1,8 @@
 //
 //  AppDelegate.swift
-//  Homework 7
+//  Task 7
 //
-//  Created by Лада on 02/11/2019.
+//  Created by Лада on 31/10/2019.
 //  Copyright © 2019 Лада. All rights reserved.
 //
 
@@ -15,9 +15,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        
+        let view = ViewController()
+        let presenter = Presenter()
+        let interactor = Interactor()
         window = UIWindow(frame: UIScreen.main.bounds)
-        window?.rootViewController = ViewController()
+        
+        view.presenter = presenter
+        presenter.view = view
+        presenter.interactor = interactor
+        interactor.presenter = presenter
+        
+        window?.rootViewController = view
         window?.makeKeyAndVisible()
         return true
     }
