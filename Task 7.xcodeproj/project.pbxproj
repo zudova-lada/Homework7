@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		07311276238C07BD00593334 /* Task_7Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07311275238C07BD00593334 /* Task_7Tests.swift */; };
 		07346660236B0B6700A4265C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0734665F236B0B6700A4265C /* AppDelegate.swift */; };
 		07346662236B0B6700A4265C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07346661236B0B6700A4265C /* ViewController.swift */; };
 		07346667236B0B6900A4265C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 07346666236B0B6900A4265C /* Assets.xcassets */; };
@@ -14,10 +15,22 @@
 		07346672236B173200A4265C /* Presenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07346671236B173200A4265C /* Presenter.swift */; };
 		07346674236B175100A4265C /* Interactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07346673236B175100A4265C /* Interactor.swift */; };
 		07346678236B2CF100A4265C /* Protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07346677236B2CF100A4265C /* Protocols.swift */; };
-		073466CA236D8F6600A4265C /* Mail.png in Resources */ = {isa = PBXBuildFile; fileRef = 073466C9236D8F6600A4265C /* Mail.png */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		07311278238C07BD00593334 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 07346654236B0B6700A4265C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0734665B236B0B6700A4265C;
+			remoteInfo = "Task 7";
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
+		07311273238C07BD00593334 /* Task 7Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Task 7Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		07311275238C07BD00593334 /* Task_7Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task_7Tests.swift; sourceTree = "<group>"; };
+		07311277238C07BD00593334 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0734665C236B0B6700A4265C /* Task 7.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Task 7.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0734665F236B0B6700A4265C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		07346661236B0B6700A4265C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -27,10 +40,16 @@
 		07346671236B173200A4265C /* Presenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Presenter.swift; sourceTree = "<group>"; };
 		07346673236B175100A4265C /* Interactor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Interactor.swift; sourceTree = "<group>"; };
 		07346677236B2CF100A4265C /* Protocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Protocols.swift; sourceTree = "<group>"; };
-		073466C9236D8F6600A4265C /* Mail.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Mail.png; path = ../../../../../Downloads/Mail.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		07311270238C07BD00593334 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		07346659236B0B6700A4265C /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -41,10 +60,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		07311274238C07BD00593334 /* Task 7Tests */ = {
+			isa = PBXGroup;
+			children = (
+				07311275238C07BD00593334 /* Task_7Tests.swift */,
+				07311277238C07BD00593334 /* Info.plist */,
+			);
+			path = "Task 7Tests";
+			sourceTree = "<group>";
+		};
 		07346653236B0B6700A4265C = {
 			isa = PBXGroup;
 			children = (
 				0734665E236B0B6700A4265C /* Task 7 */,
+				07311274238C07BD00593334 /* Task 7Tests */,
 				0734665D236B0B6700A4265C /* Products */,
 			);
 			sourceTree = "<group>";
@@ -53,6 +82,7 @@
 			isa = PBXGroup;
 			children = (
 				0734665C236B0B6700A4265C /* Task 7.app */,
+				07311273238C07BD00593334 /* Task 7Tests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -67,7 +97,6 @@
 				07346661236B0B6700A4265C /* ViewController.swift */,
 				07346671236B173200A4265C /* Presenter.swift */,
 				07346673236B175100A4265C /* Interactor.swift */,
-				073466C9236D8F6600A4265C /* Mail.png */,
 				07346677236B2CF100A4265C /* Protocols.swift */,
 			);
 			path = "Task 7";
@@ -76,6 +105,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		07311272238C07BD00593334 /* Task 7Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0731127A238C07BD00593334 /* Build configuration list for PBXNativeTarget "Task 7Tests" */;
+			buildPhases = (
+				0731126F238C07BD00593334 /* Sources */,
+				07311270238C07BD00593334 /* Frameworks */,
+				07311271238C07BD00593334 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				07311279238C07BD00593334 /* PBXTargetDependency */,
+			);
+			name = "Task 7Tests";
+			productName = "Task 7Tests";
+			productReference = 07311273238C07BD00593334 /* Task 7Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		0734665B236B0B6700A4265C /* Task 7 */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0734666E236B0B6900A4265C /* Build configuration list for PBXNativeTarget "Task 7" */;
@@ -103,6 +150,10 @@
 				LastUpgradeCheck = 1030;
 				ORGANIZATIONNAME = "Лада";
 				TargetAttributes = {
+					07311272238C07BD00593334 = {
+						CreatedOnToolsVersion = 10.3;
+						TestTargetID = 0734665B236B0B6700A4265C;
+					};
 					0734665B236B0B6700A4265C = {
 						CreatedOnToolsVersion = 10.3;
 					};
@@ -122,16 +173,23 @@
 			projectRoot = "";
 			targets = (
 				0734665B236B0B6700A4265C /* Task 7 */,
+				07311272238C07BD00593334 /* Task 7Tests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		07311271238C07BD00593334 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		0734665A236B0B6700A4265C /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				073466CA236D8F6600A4265C /* Mail.png in Resources */,
 				0734666A236B0B6900A4265C /* LaunchScreen.storyboard in Resources */,
 				07346667236B0B6900A4265C /* Assets.xcassets in Resources */,
 			);
@@ -140,6 +198,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		0731126F238C07BD00593334 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				07311276238C07BD00593334 /* Task_7Tests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		07346658236B0B6700A4265C /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -154,6 +220,14 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		07311279238C07BD00593334 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0734665B236B0B6700A4265C /* Task 7 */;
+			targetProxy = 07311278238C07BD00593334 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin PBXVariantGroup section */
 		07346668236B0B6900A4265C /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
@@ -166,6 +240,46 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		0731127B238C07BD00593334 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 6PXRX3FS7N;
+				INFOPLIST_FILE = "Task 7Tests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "School.Task-7Tests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Task 7.app/Task 7";
+			};
+			name = Debug;
+		};
+		0731127C238C07BD00593334 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 6PXRX3FS7N;
+				INFOPLIST_FILE = "Task 7Tests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "School.Task-7Tests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Task 7.app/Task 7";
+			};
+			name = Release;
+		};
 		0734666C236B0B6900A4265C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -321,6 +435,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		0731127A238C07BD00593334 /* Build configuration list for PBXNativeTarget "Task 7Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0731127B238C07BD00593334 /* Debug */,
+				0731127C238C07BD00593334 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		07346657236B0B6700A4265C /* Build configuration list for PBXProject "Task 7" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

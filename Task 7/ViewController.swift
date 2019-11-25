@@ -86,7 +86,13 @@ class ViewController: UIViewController, ViewInput {
     
     func errorMessage(error: String){
        let errorMessage = UIAlertController(title: "Error", message: error, preferredStyle: .alert)
-        self.present(errorMessage, animated: true, completion: nil)
+        self.present(errorMessage, animated: true, completion: {
+            self.perform(#selector(self.timeoutAler), with: errorMessage, afterDelay: 1.5)
+        })
+    }
+    
+    @objc func timeoutAler(_ alertController: UIAlertController) {
+        alertController.dismiss(animated: true, completion: nil)
     }
     
     @objc func tapDisplayButton() {

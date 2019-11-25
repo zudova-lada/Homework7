@@ -61,7 +61,7 @@ class Interactor: InteractorInput {
     
     func deletePicture() {
         picture = nil
-        self.presenter.dataFromInteractor(picture: self.picture)
+        self.presenter.dataFromInteractor(picture: nil)
     }
     
     func getData(from url: URL, completion: @escaping (Data?, URLResponse?, Error?) -> ()) {
