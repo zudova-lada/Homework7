@@ -7,6 +7,8 @@
 //
 //
 import XCTest
+import UIKit
+
 @testable import Task_7
 class InteractorToView_mock: ViewInput {
     var imageNil = false
@@ -28,11 +30,14 @@ class InteractorToView_mock: ViewInput {
 }
 
 class PresenterFromInteractor_mock: InteractorOutput {
-    var image = UIImage()
+    
+    var imageBool = false
     var badResult = ""
     
     func dataFromInteractor(picture: UIImage?) {
-        image = picture!
+        if picture != nil {
+            imageBool = true
+        }
     }
     
     func badResultFromInteractor(error: String) {
@@ -56,7 +61,7 @@ class PresenterFromInteractorNillPicture_mock: InteractorOutput {
 }
 
 class Task_7Tests: XCTestCase {
-
+    
     override func setUp() {
         // Put setup code here. This method is called before the invocation of each test method in the class.
     }
@@ -92,9 +97,11 @@ class Task_7Tests: XCTestCase {
     func test_WhenSetImage_ViewImageNotNil() {
         // arrange
         let viewController = ViewController()
+        let bundle = Bundle(for: type(of: self))
+        let image = UIImage(named: "Mail", in: bundle, compatibleWith: nil)
         
         // act
-        viewController.updateLabel(picture: UIImage(named: "Mail"))
+        viewController.updateLabel(picture: image)
         
         // assert
         XCTAssert((viewController.currentImageView.image != nil) , "Nil")
@@ -105,9 +112,10 @@ class Task_7Tests: XCTestCase {
         let presenter = Presenter()
         let MOCKView = InteractorToView_mock()
         presenter.view = MOCKView
-        
+        let bundle = Bundle(for: type(of: self))
+        let image = UIImage(named: "Mail", in: bundle, compatibleWith: nil)
         // act
-        presenter.dataFromInteractor(picture: UIImage(named: "Mail"))
+        presenter.dataFromInteractor(picture: image)
         
         // assert
         
@@ -128,17 +136,20 @@ class Task_7Tests: XCTestCase {
         XCTAssert((MOCKView.errorMessage == message), "Ошибка в отправке сообщения")
     }
     
-    func test_WhenImageInteractorSet_PresenterGetEquelImage(){
+    func test_WhenImageInteractorSet_PresenterGetImage(){
         // arrange
         let interactor = Interactor()
         let MOCKPresenter = PresenterFromInteractor_mock()
         interactor.presenter = MOCKPresenter
-        let image = UIImage(named: "Mail")!
+        let bundle = Bundle(for: type(of: self))
+        let image = UIImage(named: "Mail", in: bundle, compatibleWith: nil)
+        interactor.picture = image
         
         // act
         interactor.loadPicture()
         // assert
-        XCTAssert((MOCKPresenter.image == image), "Not equal")
+
+        XCTAssert(MOCKPresenter.imageBool, "Not equal")
     }
     
     func test_WhenInteractorSetNil_PresenterGetMessage() {
@@ -159,7 +170,9 @@ class Task_7Tests: XCTestCase {
         let interactor = Interactor()
         let MOCKPresenter = PresenterFromInteractorNillPicture_mock()
         interactor.presenter = MOCKPresenter
-        interactor.picture = UIImage(named: "Mail")!
+        let bundle = Bundle(for: type(of: self))
+        let image = UIImage(named: "Mail", in: bundle, compatibleWith: nil)
+        interactor.picture = image
         
         // act
         interactor.deletePicture()

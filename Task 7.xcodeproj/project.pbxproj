@@ -8,6 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		07311276238C07BD00593334 /* Task_7Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07311275238C07BD00593334 /* Task_7Tests.swift */; };
+		0731127D238C3E6300593334 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07346661236B0B6700A4265C /* ViewController.swift */; };
+		0731127E238C3E6300593334 /* Presenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07346671236B173200A4265C /* Presenter.swift */; };
+		0731127F238C3E6300593334 /* Interactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07346673236B175100A4265C /* Interactor.swift */; };
+		07311280238C3E6300593334 /* Protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07346677236B2CF100A4265C /* Protocols.swift */; };
+		07311281238C3EB500593334 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 07346666236B0B6900A4265C /* Assets.xcassets */; };
 		07346660236B0B6700A4265C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0734665F236B0B6700A4265C /* AppDelegate.swift */; };
 		07346662236B0B6700A4265C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07346661236B0B6700A4265C /* ViewController.swift */; };
 		07346667236B0B6900A4265C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 07346666236B0B6900A4265C /* Assets.xcassets */; };
@@ -152,7 +157,6 @@
 				TargetAttributes = {
 					07311272238C07BD00593334 = {
 						CreatedOnToolsVersion = 10.3;
-						TestTargetID = 0734665B236B0B6700A4265C;
 					};
 					0734665B236B0B6700A4265C = {
 						CreatedOnToolsVersion = 10.3;
@@ -183,6 +187,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				07311281238C3EB500593334 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -202,6 +207,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				07311280238C3E6300593334 /* Protocols.swift in Sources */,
+				0731127E238C3E6300593334 /* Presenter.swift in Sources */,
+				0731127D238C3E6300593334 /* ViewController.swift in Sources */,
+				0731127F238C3E6300593334 /* Interactor.swift in Sources */,
 				07311276238C07BD00593334 /* Task_7Tests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -243,7 +252,6 @@
 		0731127B238C07BD00593334 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6PXRX3FS7N;
 				INFOPLIST_FILE = "Task 7Tests/Info.plist";
@@ -256,14 +264,12 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Task 7.app/Task 7";
 			};
 			name = Debug;
 		};
 		0731127C238C07BD00593334 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6PXRX3FS7N;
 				INFOPLIST_FILE = "Task 7Tests/Info.plist";
@@ -276,7 +282,6 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Task 7.app/Task 7";
 			};
 			name = Release;
 		};
